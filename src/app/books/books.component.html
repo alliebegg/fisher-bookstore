@@ -1,21 +1,10 @@
-<h1>
-  Welcome to {{ title }}!
-</h1>
+<h2>Books</h2>
 
-<h2>{{ books.title }} Details</h2>
-<div>
-  <span>Id: </span>{{book.id}}
-</div>
-<div>
-  <span>Title: </span>{{book.title}}
-</div>
-<div>
-  <span>Auhtor: </span>{{book.author}}
-</div>
+<ul class="books">
+  <li *ngFor="let book of books" [class.selected]=
+"book === selectedBook" (click)="onSelect(book)">
+    <span class="badge">{{book.id}}</span> {{book.title}}
+  </li>
+</ul>
 
-<app-books></app-books>
-
-<p>
-  {{book}}
-</p>
-
+<app-book-detail [book]='selectedBook'></app-book-detail>
