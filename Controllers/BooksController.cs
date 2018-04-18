@@ -15,5 +15,16 @@ namespace Fisher.Bookstore.Controllers
             {
                 return View();
             }
+
+            private IEnumerable<Book> GetBooks()
+            {
+                var books = new List<Book>();
+
+                books.Add(new Book(){
+                    Title = "Continuous Delivery",
+                    Author = 
+
+                }
+            }
         }
     }
